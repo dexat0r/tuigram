@@ -6,8 +6,11 @@ edition = "2024"
 [dependencies]
 anyhow = "1.0.104"
 dotenvy = "0.15.7"
+grammers-client = "0.10.0"
+grammers-session = { version = "0.10.0", features = ["sqlite-storage"] }
+rpassword = "7.5.4"
 serde = { version = "1.0.229", features = ["derive"] }
 serde_json = "1.0.151"
 tokio = { version = "1.53.1", features = ["full"] }
 tracing = "0.1.44"
-tracing-subscriber = { version = "0.3.23", features = ["json"] }
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "json"] }

@@ -1,11 +1,10 @@
 use anyhow::Context;
 
-#[derive(Debug)]
 pub struct ApplicationConfig {
     pub telegram: TelegramConfig,
 }
 
-#[derive(Debug)]
+#[derive(Clone)]
 pub struct TelegramConfig {
     pub api_hash: String,
     pub api_id: i32,
